@@ -22,8 +22,7 @@ FatFs - Generic FAT Filesystem Module
   control the storage device that attached to the target system.
 
 ---
-
-
+----------------------------------------------------------------------------
   Revision history of FatFs module
 ---
 ----------------------------------------------------------------------------
