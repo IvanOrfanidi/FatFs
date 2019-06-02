@@ -7,6 +7,9 @@
 
 #if FF_USE_LFN == 3 /* Dynamic memory allocation */
 
+// For malloc and free
+#include <stdlib.h>
+
 /*------------------------------------------------------------------------*/
 /* Allocate a memory block                                                */
 /*------------------------------------------------------------------------*/

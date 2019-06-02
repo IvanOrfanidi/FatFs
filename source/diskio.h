@@ -5,6 +5,9 @@
 #ifndef _DISKIO_DEFINED
 #define _DISKIO_DEFINED
 
+#include "ff.h"     /* Declarations of FatFs API */
+#include "sdcard.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -29,6 +32,15 @@ DSTATUS disk_status(BYTE pdrv);
 DRESULT disk_read(BYTE pdrv, BYTE* buff, DWORD sector, UINT count);
 DRESULT disk_write(BYTE pdrv, const BYTE* buff, DWORD sector, UINT count);
 DRESULT disk_ioctl(BYTE pdrv, BYTE cmd, void* buff);
+
+/* Extern functions */
+extern int RAM_disk_read(BYTE* buff, DWORD sector, UINT count);
+extern int MMC_disk_read(BYTE* buff, DWORD sector, UINT count);
+extern int USB_disk_read(BYTE* buff, DWORD sector, UINT count);
+
+extern int RAM_disk_write(const BYTE* buff, DWORD sector, UINT count);
+extern int MMC_disk_write(const BYTE* buff, DWORD sector, UINT count);
+extern int USB_disk_write(const BYTE* buff, DWORD sector, UINT count);
 
 /* Disk Status Bits (DSTATUS) */
 

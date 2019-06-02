@@ -598,7 +598,7 @@ static const char* const VolumeStr[FF_VOLUMES] = {
 /* LFN/Directory working buffer   */
 /*--------------------------------*/
 
-#if FF_USE_LFN == 0 /* Non-LFN configuration */
+#if FF_USE_LFN == 3 /* Non-LFN configuration */
 #if FF_FS_EXFAT
 #error LFN must be enabled when enable exFAT
 #endif
